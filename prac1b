@@ -1,0 +1,18 @@
+protected void Button1_Click(object sender, EventArgs e)
+    {
+        string a, b,c;
+        a = TextBox1.Text;
+        b = TextBox2.Text;
+        c = a +" "+ b;
+        Label1.Text = c + "";
+    }
+
+    protected void Button2_Click(object sender, EventArgs e)
+    {
+        string a, b;
+        int c;
+        a = TextBox1.Text;
+        b = TextBox2.Text;
+        c = a.Length;
+        Label2.Text = c.ToString();
+    }
