@@ -1,0 +1,11 @@
+protected void Button1_Click(object sender, EventArgs e)
+    {
+        int a, b, c, d, res;
+        a = Convert.ToInt32(TextBox1.Text);
+        b = Convert.ToInt32(TextBox2.Text);
+        c = Convert.ToInt32(TextBox3.Text);
+        d = Convert.ToInt32(TextBox4.Text);
+        res = a * b * c * d;
+        Label1.Text = res.ToString();
+    }
+}
