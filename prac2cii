@@ -1,0 +1,20 @@
+//button function
+protected void Button1_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            int a = int.Parse(TextBox1.Text);
+            int[] b = { 12, 16, 18 };
+            int res;
+            res = (b[2] / a);
+            Label1.Text = "The result is:" + res.ToString();
+        }
+        catch (System.DivideByZeroException ex)
+        {
+            Label1.Text = ex.ToString();
+        }
+        catch (System.IndexOutOfRangeException ex)
+        {
+            Label1.Text = ex.ToString();
+        }
+    }
