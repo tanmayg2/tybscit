@@ -1,0 +1,29 @@
+//button
+protected void Button1_Click(object sender, EventArgs e)
+    {
+        B b = new B();
+        int n = Convert.ToInt32(TextBox1.Text);
+        int x = b.sqr(n);
+        int y = b.cube(n);
+        Label1.Text = x.ToString();
+        Label2.Text = y.ToString();
+    }
+    
+    
+    //inheritance class
+    
+    public class A
+{
+    public int sqr(int Val1)
+    {
+        return Val1 * Val1;
+    }
+}
+public class B : A
+{
+    public int cube(int Val1)
+    {
+        int v1 = sqr(Val1);
+        return v1 * Val1;
+    }
+}
