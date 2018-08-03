@@ -1,1 +1,13 @@
-
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        int a;
+        string b, c, d;
+        a = Convert.ToInt32(TextBox1.Text);
+        b = TextBox2.Text;
+        c = TextBox3.Text;
+        d = TextBox4.Text;
+        Label1.Text = "id: "+ a.ToString(); ;
+        Label2.Text = "Name: "+ b;
+        Label3.Text = "Course Name: " + c;
+        Label4.Text = "Date of birth: " + d;
+     }
