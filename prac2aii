@@ -1,0 +1,23 @@
+protected void Button1_Click(object sender, EventArgs e)
+    {
+        currency c = new currency();
+        double r = Double.Parse(TextBox1.Text);
+        double rate = c.dollar(r);
+        Label1.Text = rate.ToString();
+    }
+
+    protected void Button2_Click1(object sender, EventArgs e)
+    {
+        currency c = new currency();
+        double r = Double.Parse(TextBox1.Text);
+        double rate = c.euro(r);
+        Label2.Text = rate.ToString();
+    }
+
+    protected void Button4_Click(object sender, EventArgs e)
+    {
+        currency c = new currency();
+        double r = Double.Parse(TextBox1.Text);
+        double rate = c.yen(r);
+        Label4.Text = rate.ToString();
+    }
