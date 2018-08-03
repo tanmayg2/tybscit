@@ -1,0 +1,33 @@
+ //This is button function
+ protected void Button1_Click(object sender, EventArgs e)
+    {
+        temp t = new temp();
+        double r = Double.Parse(TextBox1.Text);
+        double rate = t.cf(r);
+        Label1.Text = rate.ToString();
+    }
+
+    protected void Button2_Click(object sender, EventArgs e)
+    {
+        temp t = new temp();
+        double r = Double.Parse(TextBox2.Text);
+        double rate = t.fc(r);
+        Label2.Text = rate.ToString();
+    }
+    
+    
+//seperate class to call functions
+
+public class temp
+{
+    public double cf(double temp)
+    {
+        temp = 9.0 / 5.0 * temp + 32;
+        return temp;
+    }
+    public double fc(double temp)
+    {
+        temp = (temp - 32) * 5 / 9;
+        return temp;
+    }
+}
