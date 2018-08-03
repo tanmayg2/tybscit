@@ -1,0 +1,31 @@
+//separate class
+
+public class add
+{
+    public int r;
+    public add(int a)
+    {
+        r = a + a;
+    }
+    public add(int a, int b)
+    {
+        r = a + b;
+    }
+    public add(int a, int b, int c)
+    {
+        r = a + b + c;
+    }
+}
+
+
+
+//pageload function
+protected void Page_Load(object sender, EventArgs e)
+    {
+        add obj1 = new add(2);
+        add obj2 = new add(2, 3);
+        add obj3 = new add(2, 3, 4);
+        Label1.Text = obj1.r.ToString();
+        Label2.Text = obj2.r.ToString();
+        Label3.Text = obj3.r.ToString();
+    }
