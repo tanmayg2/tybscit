@@ -1,0 +1,30 @@
+protected void Button1_Click(object sender, EventArgs e)
+    {
+        int a, b, c;
+        double d,x1,x2;
+        a = Convert.ToInt32(TextBox1.Text);
+        b = Convert.ToInt32(TextBox2.Text);
+        c = Convert.ToInt32(TextBox3.Text);
+        d = b * b - 4 * a * c;
+        if (d == 0)
+        {
+            Label1.Text="Both roots are equal.";
+            x1 = -b / (2.0 * a);
+            x2 = x1;
+            Label2.Text = "First  Root Root1="+x1.ToString();
+            Label3.Text = "Second  Root Root1=" + x2.ToString();
+        }
+        else if (d > 0)
+        {
+            Label1.Text="Both roots are real and diff";
+
+            x1 = (-b + Math.Sqrt(d)) / (2 * a);
+            x2 = (-b - Math.Sqrt(d)) / (2 * a);
+            Label2.Text = "First  Root Root1=" + x1.ToString();
+            Label3.Text = "Second  Root Root1=" + x2.ToString();
+        }
+        else
+        {
+            Label1.Text = "Imaginary Roots";
+
+        }
