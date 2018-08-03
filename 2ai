@@ -1,0 +1,21 @@
+//new class
+public class test
+{
+    public int fact(int x)
+    {
+        int i, r = 1;
+        for (i = 1; i <= x; i++)
+        {
+            r = i * r;
+        }
+        return r;
+    }
+}
+
+//inside default class button function 
+ protected void Button1_Click(object sender, EventArgs e)
+    {
+        test t = new test();
+        int result = t.fact(int.Parse(TextBox1.Text));
+        Label1.Text = result.ToString();
+    }
